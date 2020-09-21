@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  max-width: 730px;
+  height: 280px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.card__image {
+  flex-basis: 285px;
+  flex-shrink: 0;
+  background-image: url("./images/drawers.jpg");
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  overflow: hidden;
+}
+
+.card__image > img {
+  display: block;
+  width: 100%;
+}
+
+.card__content {
+  padding: 40px;
+}
+
+.card__title {
+  font-weight: 700;
+  font-size: 20px;
+  color: hsl(217, 19%, 35%);
+}
+
+.card__text {
+  margin-top: 20px;
+  color: hsl(214, 17%, 51%);
+  line-height: 1.5;
+}
+
+.card__details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card__details-left {
+  display: flex;
+}
+
+.name,
+.date {
+  display: block;
+}
+
+.name {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.date {
+  color: hsl(214, 17%, 51%);
+  margin-top: 2px;
+}
+
+.avatar {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.card__details-right {
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.social {
+  position: absolute;
+  bottom: 50px;
+  left: -109px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 248px;
+  padding: 18px 36px;
+  color: hsl(214, 17%, 51%);
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 10px;
+}
+
+.tip {
+  position: relative;
+  left: 112px;
+  height: 12px;
+  width: 24px;
+  background-color: hsl(217, 19%, 35%);
+  border-top: 12px solid hsl(217, 19%, 35%);
+  border-right: 12px solid white;
+  border-left: 12px solid white;
+}
+
+.share {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+}
+
+.share svg {
+  fill: #6e8098;
+}
+
+.active .share {
+  fill: white;
+  background-color: hsl(217, 19%, 35%);
+  outline: none;
+}
+
+.active .share svg {
+  fill: white;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    flex-direction: column;
+    max-width: 330px;
+    height: auto;
+    position: relative;
+  }
+
+  .card__image {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    max-height: 200px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .card__content {
+    padding: 38px;
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }
+
+  .card__title {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .card__text {
+    line-height: 1.6;
+    margin-top: 14px;
+  }
+
+  .card__details {
+    margin-top: 24px;
+  }
+
+  .card__details-right.active {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(217, 19%, 35%);
+    padding: 0 36px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .tip {
+    display: none;
+  }
+
+  .social {
+    position: initial;
+  }
+
+  .icons {
+    height: 64px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 0;
+    max-width: 175px;
+    flex-basis: 175px;
+    flex-grow: 0;
+  }
+
+  .active .share {
+    background-color: hsl(214, 17%, 51%);
+  }
+}
